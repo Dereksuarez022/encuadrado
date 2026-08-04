@@ -1,17 +1,22 @@
 h1{
   font-size: 60px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-style: normal;
-}
+  font-family: "Cormorant Garamond", serif;
+  width: 100%;
+  height: 73px;
+  }
 nav{
+  height: 35px;
+  width: 100%;
 font-size: larger;
-font-family: 'Courier New', Courier, monospace;
+font-family: "Cormorant Garamond", serif;
 background-color:burlywood;
 }
 
 body{
-  background-color: darkslategray;
-  color:bisque
+  text-align: center;
+  background-color:dodgerblue;
+  color:bisque;
+  font-family: "Cormorant Garamond", serif;
 }
 
 img{
@@ -20,5 +25,7 @@ img{
 }
 
 section#cuadros{
-  background-color: blue;
+  background-color:crimson;
+  width: 350px;
+  height: 455px;
 }
