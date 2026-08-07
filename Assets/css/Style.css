@@ -17,6 +17,7 @@ body{
   background-color:dodgerblue;
   color:bisque;
   font-family: "Cormorant Garamond", serif;
+
 }
 
 img{
@@ -24,8 +25,3 @@ img{
   height: 300px;
 }
 
-section#cuadros{
-  background-color:crimson;
-  width: 350px;
-  height: 455px;
-}
