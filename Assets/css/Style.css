@@ -9,19 +9,19 @@ nav{
   width: 100%;
 font-size: larger;
 font-family: "Cormorant Garamond", serif;
-background-color:burlywood;
+background-color: #c8d9e6;
 }
 
 body{
   text-align: center;
-  background-color:dodgerblue;
-  color:bisque;
+  background-color: #567c8d;
+  color:#FFFFFF;
   font-family: "Cormorant Garamond", serif;
 
 }
 
 img{
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 230px;
 }
 
