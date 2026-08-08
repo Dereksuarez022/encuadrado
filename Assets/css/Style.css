@@ -2,10 +2,13 @@ h1{
   font-size: 60px;
   font-family: "Cormorant Garamond", serif;
   width: 100%;
-  height: 73px;
+  height: 100%;
+  background-color: #2f4156;
+  position: relative center;
+
   }
 nav{
-  height: 35px;
+  height: 100%;
   width: 100%;
 font-size: larger;
 font-family: "Cormorant Garamond", serif;
