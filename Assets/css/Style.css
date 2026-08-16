@@ -1,4 +1,4 @@
-h1{
+h1 {
   font-size: 60px;
   font-family: "Cormorant Garamond", serif;
   width: 100%;
@@ -7,24 +7,26 @@ h1{
   position: center;
   top: 10px;
 
-  }
-nav{
-  height: 100%;
-  width: 100%;
-font-size: larger;
-font-family: "Cormorant Garamond", serif;
-background-color: #c8d9e6;
 }
 
-body{
+
+nav {
+  height: 100%;
+  width: 100%;
+  font-size: larger;
+  font-family: "Cormorant Garamond", serif;
+  background-color: #c8d9e6;
+}
+
+body {
   text-align: center;
   background-color: #567c8d;
-  color:#FFFFFF;
+  color: #FFFFFF;
   font-family: "Cormorant Garamond", serif;
 
 }
 
-img{
+img {
   width: 280px;
   height: 230px;
 }
