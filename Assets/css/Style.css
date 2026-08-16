@@ -6,9 +6,10 @@ h1 {
   background-color: #2f4156;
   position: center;
   top: 10px;
-
+border-radius: 15px;
+margin: 0px;
+margin-bottom: 10px;
 }
-
 
 nav {
   height: 100%;
@@ -16,6 +17,8 @@ nav {
   font-size: larger;
   font-family: "Cormorant Garamond", serif;
   background-color: #c8d9e6;
+  border-radius: 16px;
+ 
 }
 
 body {
@@ -27,6 +30,39 @@ body {
 }
 
 img {
-  width: 280px;
-  height: 230px;
+  width: 265px;
+  height: 235px;
+
+}
+h2{
+  background-color: #2f4156;
+  border-radius: 15px;
+}
+section#introduccion{
+  background-color: #f5efeb;
+  color: #2f4156;
+  padding: 12px;
+  border-top: 15px;
+  border-radius: 15px;
+margin: 15px;
+}
+article{
+  background-color: #f5efeb;
+  padding: 10px;
+  color: black;
+  border-radius: 15px;
+}
+.titulos-de-articulos{
+  color: #f5efeb;
+}
+footer{
+  background-color: #f5efeb;
+  color: black;
+  border-radius: 15px;
+}
+ul{
+  text-align: left;
+}
+.articulos-independientes{
+  margin: 15px;
 }
