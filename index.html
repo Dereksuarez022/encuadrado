@@ -5,20 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Recuerda y siente cada momento!Encuadrado</title>
-    <section id="links"> <!--estos son los link que se usan para la pagina-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="./Assets/css/Style.css">
-    </section>
 
 </head>
 
 <body>
     <header>
-        <h1>Encuadrado</h1> <!--este es el titulo de la pagina-->
+       <h1>Encuadrado</h1> <!--este es el titulo de la pagina-->   
         <nav style="display: flex; justify-content: space-between; padding: 15px 0; margin-right: 35px;">
             <a href="#cuadros"> productos</a>
             <a href="#tipos-de-cuadros"> ejemplos de cuadros</a>
@@ -37,7 +35,7 @@
         <section class="cuadros" id="paisajes"> <!--este es la seccion de cuadros de paisajes-->
             <h2 id="nuestros cuadros">Nuestros cuadros</h2>
             <h2>Paisajismo</h2>
-           <div style="display: grid; grid-template-columns: repeat(4, 4fr); grid-gap: 35px;">
+           <div class="galeria-grid">
            <article>
                 <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
                     <img src="/Assets/img/Amapolas-en-los-alrededores-de-argenteuil.jpg" alt="una pintura de un valle lleno de amapolas" width="100%;">
@@ -97,7 +95,7 @@
 
            <section class="cuadros" id="plantas-y-flores"> <!--este es la seccion de cuadros de flores y plantas-->
             <h2>Flores y Plantas</h2>
-             <div style="display: grid; grid-template-columns: repeat(4, 4fr); grid-gap: 35px;">
+             <div class="galeria-grid">
             <article>
                 <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
                     <img src="/Assets/img/Young-at-heart.jpg" alt="una pintura de un arbol con hoja amarillas" width="100%;">
@@ -145,12 +143,6 @@
                     <img src="/Assets/img/forget-me-not.jpg" alt="una pintura con la flor no me olvides" width="100%;">
                     <p style="margin: 10 px 0 0 0; text-align: center;">Forget me not</p>
                     <ul> 
-                        Artista
-
-Estilo artísitico
-
-Obra
-
                     <li>Artista: Pierre Joseph Redouté (1759 - 1840)</li>
                     <li>Estilo artísitico: Clasicismo</li>
                     <li>Obra: Forget-me-not / Redouté</li>
@@ -165,7 +157,7 @@ Obra
 
            <section class="cuadros" id="cuadros-de-retratos"> <!--este es la seccion de cuadros de retratos-->
             <h2>Retratos y Pinturas Artisticas </h2>
-  <div style="display: grid; grid-template-columns: repeat(4, 4fr); grid-gap: 35px;">
+  <div class="galeria-grid">
       <article>
                 <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
                     <img src="./Assets/img/caminante-sobre-el-mar-de-niebla.jpg" alt="una pintura de un hombre sobre una roca viendo un mar de niebla" width="100%;">
@@ -226,7 +218,7 @@ Obra
 
            <section class="cuadros" id="cuadros-de-lugares"> <!--este es la seccion de cuadros de lugares-->
             <h2>Lagos, Restaurantes y lugares concurrido.</h2>
- <div style="display: grid; grid-template-columns: repeat(4, 4fr); grid-gap: 35px;">
+ <div class="galeria-grid">
     <article>
                 <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
                     <img src="./Assets/img/Estanque-de-Nenufares.jpg" alt="una pintura de un estanque de Nenufares" width="100%;">
@@ -313,5 +305,5 @@ Obra
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, rem omnis? Tenetur autem rerum incidunt dolorum odit aperiam facere, nostrum, consectetur perspiciatis quidem eligendi illum esse? Perferendis dolorem molestias voluptatibus.</p>
     </footer>
 </body>
-
+<!--DABH:Avanzar en busca de la verdad-->
 </html>
