@@ -1,16 +1,9 @@
 h1 {
-  font-size: 60px;
   font-family: "Cormorant Garamond", serif;
-  width: 100%;
-  height: 100px;
-background-color: #2f4156;
-  position: left  ;
-  top: 10px;
-border-radius: 15px;
-margin: 0px;
-margin-bottom: 10px;
-
+  color: #2f4156;
+  position: left;
 }
+
 /* Base: móvil (1 columna) */
 .galeria-grid {
   display: grid;
@@ -31,13 +24,17 @@ nav {
   nav {
     flex-direction: row;
   }
-} /* Tablet: 2 columnas */
+}
+
+/* Tablet: 2 columnas */
 
 @media (min-width: 1024px) {
   .galeria-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-} /* Escritorio: 4 columnas como tenías */
+}
+
+/* Escritorio: 4 columnas como tenías */
 
 nav {
   height: 100%;
@@ -47,8 +44,12 @@ nav {
   background-color: #c8d9e6;
   border-radius: 16px;
   padding-top: 15px;
-
- 
+  padding: 15px 0;
+  margin-right: 35px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  margin-right: 35px;
 }
 
 body {
@@ -58,41 +59,57 @@ body {
   font-family: "Cormorant Garamond", serif;
 
 }
+#nuestros-cuadros{
 
+}
+#contactos{
+  text-align: left;
+}
 img {
   width: 265px;
   height: 235px;
 
 }
-h2{
+
+h2 {
   background-color: #2f4156;
   border-radius: 15px;
 }
-section#introduccion{
+
+section#introduccion {
   background-color: #f5efeb;
   color: #2f4156;
   padding: 12px;
   border-top: 15px;
   border-radius: 15px;
-margin: 15px;
+  margin: 15px;
+  text-align: left;
 }
-article{
+
+article {
   background-color: #f5efeb;
   padding: 10px;
   color: black;
   border-radius: 15px;
 }
-.titulos-de-articulos{
+
+.titulos-de-articulos {
   color: #f5efeb;
 }
-footer{
+
+footer {
   background-color: #f5efeb;
   color: black;
   border-radius: 15px;
 }
-ul{
+
+ul {
   text-align: left;
 }
-.articulos-independientes{
+
+.articulos-independientes {
   margin: 15px;
+  margin-top: 35px;
+  text-align: left;
+
 }
