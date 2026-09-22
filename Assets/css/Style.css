@@ -111,3 +111,74 @@ ul {
   text-align: left;
 
 }
+
+#formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 480px;
+  margin-top: 20px;
+}
+
+.campo-formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.campo-formulario label{
+  font-weight: 600;
+  color: #2f4156;
+}
+
+.campo-formulario input, .campo-formulario textarea{
+  font-family: "Cormorant Garamond", serif;
+  font-size: medium;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f5efeb;
+  color: #2f4156;
+  resize: vertical;
+}
+
+.campo-formulario input.campo-invalido, .campo-formulario textarea.campo-invalido{
+  outline: 3px solid #b04a4a;
+}
+
+#btn-enviar{
+  align-self: flex-start;
+  padding: 10px 24px;
+border: none;
+border-radius: 10px;
+background-color: #2f4156;
+color: #FFFFFF;
+ font-family: "Cormorant Garamond", serif;
+ font-size: medium;
+ cursor: pointer;
+ transition: background-color 0.2s ease;
+}
+
+#btn-enviar:hover {
+  background-color: #c8d9e6;
+  color: #2f4156;
+}
+
+#btn-enviar:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+ 
+#form-status{
+  min-height: 15px;
+  font-weight: 600;
+}
+
+#form-status.exito {
+color: #2f6b3a;
+}
+
+#form-status.error {
+  color: #b04a4a;
+}

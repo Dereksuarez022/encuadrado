@@ -336,14 +336,13 @@
             <h2 class="titulos-de-articulos">De la idea a tu pared: proceso de compra, envio y entrega</h2>
             <p>el proceso de compra se realiza en la pagina, una vez haya escogido el/los articulos de su preferencia:
             </p>
-            <li>
+           
                 <ol><strong>1.</strong> debe ponerlo en el carrito y confirmar sus articulos</ol>
                 <ol><strong>2.</strong> una vez confirmado sus articulos, coloque su direccion de residencia donde sera
                     entregado el/los articulos</ol>
                 <ol><strong>3.</strong> confirme el pago con su metodo de pago de preferencia, siendo tarjeta de
                     credito, tarjeta de debito, cuenta de ahorros, tranferencia, paypal, entre otros metodos.</ol>
-            </li>
-
+           
         </article>
 
         <section id="contactos"> <!--este es la seccion de contactos-->
@@ -356,7 +355,24 @@
             <ol>Facebook: Oficial_Encuadrado</ol>
             <ol>gmail: @EncuadradoOficial-sugerencias.com.co</ol>
 
+            <form id="formulario-contactanos">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre-formulario" name="nombre" required minlength="6" placeholder="Tu Nombre">
+                </div>
 
+                <div class="campo-formulario">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" id="correo-electronico" name="correo" required placeholder="Tucorreo@ejemplo.com">
+                </div>
+
+                <div class="campo-formulario">
+<label for="mensaje">Mensaje</label>
+<textarea name="mensaje" id="mensaje" rows="5" required minlength="8" placeholder="cuentanos que cuadros tienes en mente..."></textarea>
+                </div>
+                <button type="submit" id="btn-enviar">Enviar mensaje</button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+            </form>
         </section>
     </main>
     <footer>
@@ -366,6 +382,7 @@
         <p>toda la informacion aqui presentada esta protegida por los derechos de autor presentes en Ley 1520 de 2012 y
             la Ley 1915 de 2018, tambien protegidos por el articulo 61 de la constitucion politica de colombia.</p>
     </footer>
+    <script src="./script.js"></script>
 </body>
 <!--DABH:Avanzar en busca de la verdad-->
 </html>
