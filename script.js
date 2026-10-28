@@ -1,4 +1,4 @@
-document.addEventListenerh("Domcontentloaded", () => { const formulario = document.getElementById
+document.addEventListener("DOMContentLoaded", () => { const formulario = document.getElementById
   ("formulario-contactanos");
 
   if (!formulario) return;
@@ -13,13 +13,13 @@ document.addEventListenerh("Domcontentloaded", () => { const formulario = docume
   };
 
   function marcarinvalido(campo, invalido) {
-    campo.classlist.toggle("campo-invalido", invalido);
+    campo.classList.toggle("campo-invalido", invalido);
   }
 
   function validarformulario() {
     let valido = true;
 
-    if (campos.nombre.value.trim().length < 6){
+    if (campos.nombre.value.trim().length < 2){
       marcarinvalido(campos.nombre, true);
       valido = false;
     } else {
@@ -61,7 +61,7 @@ document.addEventListenerh("Domcontentloaded", () => { const formulario = docume
     };
 
     boton.disabled = true;
-    boton.textecontent = "Enviando...";
+    boton.texteContent = "Enviando...";
 
     try {
       const respuesta = await fetch("/api/contacto", {
@@ -73,16 +73,16 @@ document.addEventListenerh("Domcontentloaded", () => { const formulario = docume
       const resultado = await respuesta.json();
 
       if(respuesta.ok) {
-        estado.textecontent = resultado.mensaje || "¡Mensaje enviado con exito!";
+        estado.texteContent = resultado.mensaje || "¡Mensaje enviado con exito!";
         estado.className = "exito";
         formulario.reset()
       } else {
-        estado.textecontent = resultado.mensaje || "¡ocurrio un error al enviar el mensaje!";
+        estado.texteContent = resultado.mensaje || "¡ocurrio un error al enviar el mensaje!";
         estado.className = "error";
       }
     } catch (error) {
       estado.textContent = "No se pudo conectar con el servidor. Intenta mas tarde.";
-      estado.className = "error;"
+      estado.className = "error"
     } finally {
       boton.disabled = false;
       boton.textContent = "Enviar mensaje";
