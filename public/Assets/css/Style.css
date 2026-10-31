@@ -1,8 +1,9 @@
-html{
+/* ===== Base ===== */
+html {
   scroll-behavior: smooth;
 }
 
-[hidden]{
+[hidden] {
   display: none !important;
 }
 
@@ -11,7 +12,6 @@ body {
   background-color: #567c8d;
   color: #FFFFFF;
   font-family: "Cormorant Garamond", serif;
-
 }
 
 h1 {
@@ -21,17 +21,27 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  background-color: #2f4156;
+  border-radius: 15px;
+}
+
+ul {
+  text-align: left;
+}
+
+/* ===== Barra de navegación ===== */
 nav {
- display: flex;
- flex-wrap: wrap;
- align-items: center;
- justify-content: space-between;
- gap: 10px 24px;
- font-size: larger;
- font-family: "Cormorant Garamond", serif;
- background-color: #c8d9e6;
- border-radius: 16px;
- padding: 15px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 24px;
+  font-size: larger;
+  font-family: "Cormorant Garamond", serif;
+  background-color: #c8d9e6;
+  border-radius: 16px;
+  padding: 15px 20px;
 }
 
 nav h1 { order: 1; }
@@ -62,6 +72,7 @@ nav a.activo {
   font-weight: 700;
 }
 
+/* ===== Botones ===== */
 .btn {
   padding: 8px 16px;
   border: none;
@@ -83,31 +94,22 @@ nav a.activo {
   cursor: not-allowed;
 }
 
-/* Base: móvil (1 columna) */
-.galeria-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.btn-filtro.activo {
+  background-color: #f5efeb;
+  color: #2f4156;
 }
 
-
-.galeria-grid img{
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: zoom-in;
+/* ===== Introducción ===== */
+#introduccion {
+  background-color: #f5efeb;
+  color: #2f4156;
+  padding: 12px;
+  border-radius: 15px;
+  margin: 15px;
+  text-align: left;
 }
 
-.acciones-cuadro {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 10px;
-}
-
+/* ===== Filtros y buscador ===== */
 .filtros {
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +120,7 @@ nav a.activo {
 }
 
 #buscador {
-  font-family:"Cormorant Garamond", serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: medium;
   padding: 10px 12px;
   border: none;
@@ -128,64 +130,16 @@ nav a.activo {
   color: #2f4156;
 }
 
-.btn-filtro.activo {
-  background-color: #f5efeb;
-  color: #2f4156;
-}
-
 #sin-resultados {
   margin: 20px;
 }
 
-/* Tablet: 2 columnas */
-@media (min-width: 600px) {
-  .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-#btn-menu {
-  display: none;
-}
-#menu-enlaces {
-  order: 2;
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  gap: 24px;
-}
-
-}
-
-
-/* Escritorio: 4 columnas como lo tengo */
-
-@media (min-width: 1024px) {
-  .galeria-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-
-
-h2 {
-  background-color: #2f4156;
-  border-radius: 15px;
-}
-
-dialog h2 {
-  background-color: transparent;
-}
-
-footer h2 {
-  color: #f5efeb;
-}
-
-section #introduccion {
-  background-color: #f5efeb;
-  color: #2f4156;
-  padding: 12px;
-  border-radius: 15px;
-  margin: 15px;
-  text-align: left;
+/* ===== Galería de cuadros ===== */
+/* Base: móvil (1 columna) */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 article {
@@ -196,24 +150,75 @@ article {
 }
 
 
-
-footer {
-  background-color: #f5efeb;
-  color: black;
-  border-radius: 15px;
+.galeria-grid article {
+  display: flex;
+  flex-direction: column;
 }
 
-ul {
-  text-align: left;
+.galeria-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain; 
+  background-color: #c8d9e6;
+  border-radius: 10px;
+  cursor: zoom-in;
 }
 
+.titulo-cuadro {
+  margin: 10px 0 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.acciones-cuadro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto; /* empuja los botones al fondo de la tarjeta */
+  padding-top: 10px;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 600px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #btn-menu {
+    display: none;
+  }
+
+  #menu-enlaces {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 24px;
+  }
+}
+
+/* Escritorio: 4 columnas */
+@media (min-width: 1024px) {
+  .galeria-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== Artículos informativos ===== */
 .articulos-independientes {
   margin: 15px;
   margin-top: 35px;
   text-align: left;
 }
 
-#contactos{
+.titulos-de-articulos {
+  color: #f5efeb;
+}
+
+/* ===== Contacto y formulario ===== */
+#contactos {
   text-align: left;
 }
 
@@ -227,6 +232,13 @@ ul {
   gap: 14px;
   max-width: 480px;
   margin-top: 20px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
 }
 
 .campo-formulario label {
@@ -252,6 +264,7 @@ ul {
 }
 
 #contador-mensaje {
+  display: block;
   text-align: right;
 }
 
@@ -262,7 +275,7 @@ ul {
   border-radius: 10px;
   background-color: #2f4156;
   color: #FFFFFF;
-  font-family: "cormorant Garamond", serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: medium;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -298,6 +311,18 @@ ul {
   color: #b04a4a;
 }
 
+/* ===== Pie de página ===== */
+footer {
+  background-color: #f5efeb;
+  color: black;
+  border-radius: 15px;
+}
+
+footer h2 {
+  color: #f5efeb;
+}
+
+/* ===== Ventanas (dialog): lightbox y carrito ===== */
 dialog {
   border: none;
   border-radius: 15px;
@@ -312,6 +337,10 @@ dialog {
 
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog h2 {
+  background-color: transparent;
 }
 
 .contenido-dialog {
@@ -337,7 +366,7 @@ dialog::backdrop {
   padding-left: 0;
   list-style: none;
 }
- 
+
 #carrito-lista li {
   display: flex;
   justify-content: space-between;
@@ -346,7 +375,7 @@ dialog::backdrop {
   padding: 8px 0;
   border-bottom: 1px solid #c8d9e6;
 }
- 
+
 #carrito-acciones {
   display: flex;
   flex-wrap: wrap;
@@ -354,109 +383,9 @@ dialog::backdrop {
   margin-top: 15px;
 }
 
+/* ===== Botón volver arriba ===== */
 #btn-arriba {
   position: fixed;
   right: 20px;
   bottom: 20px;
-}
-
-
-img {
-  width: 265px;
-  height: 235px;
-}
-
-
-
-
-.titulos-de-articulos {
-  color: #f5efeb;
-}
-
-footer {
-  background-color: #f5efeb;
-  color: black;
-  border-radius: 15px;
-}
-
-ul {
-  text-align: left;
-}
-
-.articulos-independientes {
-  margin: 15px;
-  margin-top: 35px;
-  text-align: left;
-
-}
-
-#formulario-contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 480px;
-  margin-top: 20px;
-}
-
-.campo-formulario{
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: left;
-}
-
-.campo-formulario label{
-  font-weight: 600;
-  color: #2f4156;
-}
-
-.campo-formulario input, .campo-formulario textarea{
-  font-family: "Cormorant Garamond", serif;
-  font-size: medium;
-  padding: 10px 12px;
-  border: none;
-  border-radius: 10px;
-  background-color: #f5efeb;
-  color: #2f4156;
-  resize: vertical;
-}
-
-.campo-formulario input.campo-invalido, .campo-formulario textarea.campo-invalido{
-  outline: 3px solid #b04a4a;
-}
-
-#btn-enviar{
-  align-self: flex-start;
-  padding: 10px 24px;
-border: none;
-border-radius: 10px;
-background-color: #2f4156;
-color: #FFFFFF;
- font-family: "Cormorant Garamond", serif;
- font-size: medium;
- cursor: pointer;
- transition: background-color 0.2s ease;
-}
-
-#btn-enviar:hover {
-  background-color: #c8d9e6;
-  color: #2f4156;
-}
-
-#btn-enviar:disabled{
-  opacity: 0.6;
-  cursor: not-allowed;
-}
- 
-#form-status{
-  min-height: 15px;
-  font-weight: 600;
-}
-
-#form-status.exito {
-color: #2f6b3a;
-}
-
-#form-status.error {
-  color: #b04a4a;
 }

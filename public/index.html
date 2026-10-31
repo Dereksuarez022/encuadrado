@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuadrado: cuadros y enmarque de fotos familiares para guardar tus recuerdos.">
+  <title>Encuadrado | ¡Recuerda y siente cada momento!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="Assets/css/Style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Encuadrado</h1> <!-- Este es el título de la página -->
+      <button type="button" id="btn-menu" class="btn" aria-expanded="false" aria-controls="menu-enlaces">☰ Menú</button>
+      <div id="menu-enlaces">
+        <a href="#catalogo">Productos</a>
+        <a href="#estilos-que-manejamos">Estilos</a>
+        <a href="#proceso-de-compra">Cómo comprar</a>
+        <a href="#contactos">Contacto</a>
+      </div>
+      <button type="button" id="btn-carrito" class="btn">Carrito (<span id="carrito-contador">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduccion">
+      <p>Les doy la bienvenida a Encuadrado, un espacio pensado para quienes creen que las paredes vacías son solo
+        historias esperando a ser contadas. Aquí no vendemos simples cuadros: creamos piezas que transforman
+        ambientes, despiertan emociones y reflejan la personalidad de quienes deciden escogerlas.</p>
+    </section>
+
+    <div id="catalogo">
+      <section class="filtros" id="filtros">
+        <input type="search" id="buscador" placeholder="Buscar por título, artista o estilo..."
+          aria-label="Buscar cuadros">
+        <button type="button" class="btn btn-filtro activo" data-categoria="todas">Todas</button>
+        <button type="button" class="btn btn-filtro" data-categoria="paisajes">Paisajismo</button>
+        <button type="button" class="btn btn-filtro" data-categoria="plantas-y-flores">Flores y plantas</button>
+        <button type="button" class="btn btn-filtro" data-categoria="cuadros-de-retratos">Pinturas artísticas</button>
+        <button type="button" class="btn btn-filtro" data-categoria="cuadros-de-lugares">Lugares</button>
+      </section>
+
+      <section class="cuadros" id="paisajes">
+        <h2>Paisajismo</h2>
+        <div class="galeria-grid">
+        <article>
+          <img src="Assets/img/Amapolas-en-los-alrededores-de-argenteuil.jpg" alt="Pintura de un campo lleno de amapolas rojas bajo un cielo con nubes" loading="lazy">
+          <p class="titulo-cuadro">Amapolas en los alrededores de Argenteuil</p>
+          <ul>
+              <li>Artista: Claude Monet (1840 - 1926)</li>
+              <li>Estilo artístico: Impresionismo</li>
+              <li>Obra: Amapolas en los alrededores de Argenteuil (1873)</li>
+              <li>Tamaño: 65 x 50 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/Impresion-_-salida-del-sol.jpg" alt="Pintura del sol naciente sobre un puerto con bruma azul y reflejos naranjas en el agua" loading="lazy">
+          <p class="titulo-cuadro">Impresión, salida del sol</p>
+          <ul>
+              <li>Artista: Claude Monet (1840 - 1926)</li>
+              <li>Estilo artístico: Impresionismo</li>
+              <li>Obra: Impresión, salida del sol (1872)</li>
+              <li>Tamaño: 63 x 48 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: París, Museo Marmottan</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/San-giorgio-maggiore-al-anochecer.jpg" alt="Pintura de la isla de San Giorgio Maggiore en Venecia con un cielo naranja al atardecer" loading="lazy">
+          <p class="titulo-cuadro">San Giorgio Maggiore al anochecer</p>
+          <ul>
+              <li>Artista: Claude Monet (1840 - 1926)</li>
+              <li>Estilo artístico: Impresionismo</li>
+              <li>Obra: San Giorgio Maggiore al anochecer - Atardecer en Venecia (1908)</li>
+              <li>Tamaño: 92 x 73 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Tokio, Bridgestone Museum of Art</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/La-noche-estrellada.jpg" alt="Pintura de un cielo nocturno con remolinos de estrellas sobre un pueblo y un ciprés" loading="lazy">
+          <p class="titulo-cuadro">La noche estrellada</p>
+          <ul>
+              <li>Artista: Vincent van Gogh (1853 - 1890)</li>
+              <li>Estilo artístico: Postimpresionismo</li>
+              <li>Obra: La noche estrellada (1889)</li>
+              <li>Tamaño: 92 x 72 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Nueva York, Museo de Arte Moderno (MoMA)</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="cuadros" id="plantas-y-flores">
+        <h2>Flores y plantas</h2>
+        <div class="galeria-grid">
+        <article>
+          <img src="Assets/img/Young-at-heart.jpg" alt="Obra de un árbol de hojas amarillas sobre un fondo verde azulado" loading="lazy">
+          <p class="titulo-cuadro">Young at heart</p>
+          <ul>
+              <li>Artista: Katarina Holmström</li>
+              <li>Estilo artístico: Fotografía</li>
+              <li>Obra: Young at heart</li>
+              <li>Tamaño: personalizable</li>
+              <li>Técnica: Fotografía</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/Almendro-en-flor.jpg" alt="Pintura de ramas de almendro en flor sobre un fondo azul turquesa" loading="lazy">
+          <p class="titulo-cuadro">Almendro en flor</p>
+          <ul>
+              <li>Artista: Vincent van Gogh (1853 - 1890)</li>
+              <li>Estilo artístico: Postimpresionismo</li>
+              <li>Obra: Almendro en flor (1890)</li>
+              <li>Tamaño: 92 x 73 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Ámsterdam, Museo Van Gogh</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/Morero.jpg" alt="Pintura de una morera de hojas amarillas y naranjas contra un cielo azul" loading="lazy">
+          <p class="titulo-cuadro">La morera</p>
+          <ul>
+              <li>Artista: Vincent van Gogh (1853 - 1890)</li>
+              <li>Estilo artístico: Postimpresionismo</li>
+              <li>Obra: La morera (1889)</li>
+              <li>Tamaño: 65 x 54 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Pasadena, Museo Norton Simon</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/forget-me-not.jpg" alt="Ilustración botánica de una planta con pequeñas flores azules, la flor no me olvides" loading="lazy">
+          <p class="titulo-cuadro">Forget me not</p>
+          <ul>
+              <li>Artista: Pierre Joseph Redouté (1759 - 1840)</li>
+              <li>Estilo artístico: Clasicismo</li>
+              <li>Obra: Forget-me-not</li>
+              <li>Tamaño: personalizable</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="cuadros" id="cuadros-de-retratos">
+        <h2>Retratos y pinturas artísticas</h2>
+        <div class="galeria-grid">
+        <article>
+          <img src="Assets/img/caminante-sobre-el-mar-de-niebla.jpg" alt="Pintura de un hombre de espaldas sobre una roca mirando un mar de niebla" loading="lazy">
+          <p class="titulo-cuadro">Caminante sobre el mar de niebla</p>
+          <ul>
+              <li>Artista: Caspar David Friedrich (1774 - 1840)</li>
+              <li>Estilo artístico: Romanticismo</li>
+              <li>Obra: El caminante sobre el mar de niebla (1817)</li>
+              <li>Tamaño: 75 x 95 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Galería de Arte de Hamburgo</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/La-creacion-de-Adan.jpg" alt="Fresco de la mano de Adán casi tocando la mano de Dios" loading="lazy">
+          <p class="titulo-cuadro">La creación de Adán</p>
+          <ul>
+              <li>Artista: Miguel Ángel Buonarroti (1475 - 1564)</li>
+              <li>Estilo artístico: Renacimiento</li>
+              <li>Obra: La creación de Adán (1510)</li>
+              <li>Tamaño: personalizable</li>
+              <li>Técnica: Fresco</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/El-beso.jpg" alt="Pintura de dos personas abrazadas con mantos dorados sobre un fondo dorado" loading="lazy">
+          <p class="titulo-cuadro">El beso</p>
+          <ul>
+              <li>Artista: Gustav Klimt (1862 - 1918)</li>
+              <li>Estilo artístico: Art nouveau</li>
+              <li>Obra: El beso (1908)</li>
+              <li>Tamaño: 180 x 180 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Viena, Österreichische Galerie</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/petirrojo.jpg" alt="Acuarela de un pájaro petirrojo con el pecho naranja" loading="lazy">
+          <p class="titulo-cuadro">Petirrojo</p>
+          <ul>
+              <li>Artista: William Turner (1775 - 1851)</li>
+              <li>Estilo artístico: Romanticismo</li>
+              <li>Obra: Petirrojo, de The Farnley Book of Birds</li>
+              <li>Tamaño: personalizable</li>
+              <li>Técnica: Acuarela</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="cuadros" id="cuadros-de-lugares">
+        <h2>Lagos, restaurantes y lugares concurridos</h2>
+        <div class="galeria-grid">
+        <article>
+          <img src="Assets/img/Estanque-de-Nenufares.jpg" alt="Pintura de un puente sobre un estanque de nenúfares rodeado de vegetación" loading="lazy">
+          <p class="titulo-cuadro">Estanque de nenúfares</p>
+          <ul>
+              <li>Artista: Claude Monet (1840 - 1926)</li>
+              <li>Estilo artístico: Impresionismo</li>
+              <li>Obra: Estanque de nenúfares II (1899)</li>
+              <li>Tamaño: 93 x 88 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Galería Nacional de Londres</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/La-noche-estrellada-sobre-el-rodano.jpg" alt="Pintura de la noche sobre el río Ródano con estrellas y reflejos de luces en el agua" loading="lazy">
+          <p class="titulo-cuadro">La noche estrellada sobre el Ródano</p>
+          <ul>
+              <li>Artista: Vincent van Gogh (1853 - 1890)</li>
+              <li>Estilo artístico: Postimpresionismo</li>
+              <li>Obra: La noche estrellada sobre el Ródano (1888)</li>
+              <li>Tamaño: 92 x 72 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: París, Museo de Orsay</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/Restaurante-Jacobo-en-Nienstedten-cerca-de-Elbe.jpg" alt="Pintura de una terraza de restaurante bajo árboles, con mesas y personas sentadas" loading="lazy">
+          <p class="titulo-cuadro">Restaurante Jacobo en Nienstedten, cerca del Elba</p>
+          <ul>
+              <li>Artista: Max Liebermann (1847 - 1935)</li>
+              <li>Estilo artístico: Impresionismo</li>
+              <li>Obra: Restaurante Jacobo en Nienstedten cerca del Elba (1902)</li>
+              <li>Tamaño: 100 x 70 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        <article>
+          <img src="Assets/img/Terraza-de-cafe-por-la-noche.jpg" alt="Pintura de una terraza de café iluminada de amarillo bajo un cielo nocturno estrellado" loading="lazy">
+          <p class="titulo-cuadro">Terraza de café por la noche</p>
+          <ul>
+              <li>Artista: Vincent van Gogh (1853 - 1890)</li>
+              <li>Estilo artístico: Postimpresionismo</li>
+              <li>Obra: Terraza de café por la noche (1888)</li>
+              <li>Tamaño: 65 x 81 cm</li>
+              <li>Técnica: Óleo sobre lienzo</li>
+              <li>Ubicación: Otterlo, Museo Kröller-Müller</li>
+          </ul>
+          <div class="acciones-cuadro">
+            <button type="button" class="btn btn-ver">Ver detalle</button>
+            <button type="button" class="btn btn-agregar">Agregar al carrito</button>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <p id="sin-resultados" hidden>No encontramos cuadros con esa búsqueda.</p>
+    </div> <!-- fin de #catalogo -->
+
+    <article id="estilos-que-manejamos" class="articulos-independientes">
+      <h2 class="titulos-de-articulos">¿Qué estilos manejamos?</h2>
+      <p>Los estilos que manejamos son muy variados. Entre ellos están:</p>
+      <ul>
+        <li><strong>Impresionismo (1860–1890, con auge en la década de 1870):</strong> nacido en Francia, buscaba
+          capturar la luz y el instante fugaz mediante pinceladas sueltas y colores puros, muchas veces pintando al
+          aire libre. Rompió con la pintura académica tradicional. Sus exponentes fueron Claude Monet, Pierre-Auguste
+          Renoir, Edgar Degas y Camille Pissarro.</li>
+
+        <li><strong>Postimpresionismo (finales del siglo XIX, aprox. 1886–1905):</strong> continuación y a la vez
+          ruptura con el Impresionismo. Conservó el interés por el color y la luz, pero incorporó mayor estructura,
+          simbolismo y expresión emocional o subjetiva. No fue un movimiento homogéneo, sino varios estilos
+          individuales. Sus exponentes fueron Vincent van Gogh, Paul Cézanne, Paul Gauguin y Georges Seurat.</li>
+
+        <li><strong>Romanticismo (finales del siglo XVIII – mediados del siglo XIX, aprox. 1780–1850):</strong>
+          reacción contra el racionalismo del Neoclasicismo, exaltando la emoción, la imaginación, la naturaleza
+          salvaje y lo sublime. Muchas obras exploran el drama, el individualismo y temas históricos o exóticos. Sus
+          exponentes fueron Francisco de Goya, Eugène Delacroix y Caspar David Friedrich.</li>
+
+        <li><strong>Renacimiento (siglos XIV–XVI, aprox. 1400–1600):</strong> movimiento artístico y cultural
+          surgido en Italia que retomó los ideales estéticos grecorromanos: proporción, perspectiva y armonía. Se
+          centró en el humanismo y en el estudio de la anatomía y la naturaleza. Sus exponentes fueron Leonardo da
+          Vinci, Miguel Ángel, Rafael y Botticelli.</li>
+      </ul>
+    </article>
+
+    <article class="articulos-independientes">
+      <h2 class="titulos-de-articulos">Diferencias entre reproducciones de obras clásicas y diseños personalizados</h2>
+      <p>Las obras clásicas que presentamos aquí pueden ser de dos tipos:</p>
+      <ul>
+        <li><strong>Clásicas:</strong> reproducciones de obras reconocidas, que respetan las proporciones y los
+          colores de la obra original.</li>
+        <li><strong>Personalizadas:</strong> obras que nos piden realizar de forma independiente u obras de
+          fabricantes independientes. También personalizamos los marcos y los encuadres a gusto del comprador.</li>
+        <li><strong>Materiales:</strong> usamos óleo sobre lienzo, impresiones fotográficas y técnicas mixtas.</li>
+      </ul>
+    </article>
+
+    <article class="articulos-independientes" id="proceso-de-compra">
+      <h2 class="titulos-de-articulos">De la idea a tu pared: proceso de compra, envío y entrega</h2>
+      <p>El proceso de compra empieza en esta página, una vez hayas escogido el cuadro o los cuadros que te gustan:</p>
+      <ol>
+        <li>Agrégalos al carrito con el botón «Agregar al carrito» y revisa tu selección.</li>
+        <li>Abre el carrito y pulsa «Enviar pedido por el formulario»: tu selección se copia al formulario de contacto.</li>
+        <li>Completa tu nombre, tu correo y la dirección donde quieres recibir tu pedido, y envía el mensaje.</li>
+        <li>Te contactamos para confirmar el valor, el envío y el método de pago de tu preferencia.</li>
+      </ol>
+    </article>
+
+    <section id="contactos">
+      <h2>Contáctanos</h2>
+      <p>Cuéntanos qué cuadros tienes en mente y compártelos con nosotros. Puedes encontrarnos en nuestras redes
+        sociales:</p>
+      <ul>
+        <li>Instagram: Encuadrado_oficial</li>
+        <li>TikTok: @Encuadrado_oficial066</li>
+        <li>Facebook: Oficial_Encuadrado</li>
+        <li>Correo: <a href="mailto:sugerencias@encuadrado.com.co">sugerencias@encuadrado.com.co</a></li>
+      </ul>
+
+      <form id="formulario-contactanos" novalidate>
+        <div class="campo-formulario">
+          <label for="nombre-formulario">Nombre</label>
+          <input type="text" id="nombre-formulario" name="nombre" required minlength="2" maxlength="80"
+            placeholder="Tu nombre" autocomplete="name">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="correo-electronico">Correo electrónico</label>
+          <input type="email" id="correo-electronico" name="correo" required placeholder="tucorreo@ejemplo.com"
+            autocomplete="email">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="mensaje">Mensaje</label>
+          <textarea name="mensaje" id="mensaje" rows="5" required minlength="10" maxlength="1000"
+            placeholder="Cuéntanos qué cuadros tienes en mente..."></textarea>
+          <small id="contador-mensaje">0 / 1000</small>
+        </div>
+
+        <button type="submit" id="btn-enviar">Enviar mensaje</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Todos los derechos reservados a Encuadrado 2026</h2>
+    <p>Ante cualquier sugerencia o fallo con nuestra página o en tu pedido, contáctanos en
+      <a href="mailto:sugerencias@encuadrado.com.co">sugerencias@encuadrado.com.co</a></p>
+    <p>Toda la información aquí presentada está protegida por los derechos de autor presentes en la Ley 1520 de 2012
+      y la Ley 1915 de 2018, también protegidos por el artículo 61 de la Constitución Política de Colombia.</p>
+  </footer>
+
+  <!-- Ventana (dialog) para ver un cuadro en grande -->
+  <dialog id="lightbox" aria-label="Detalle del cuadro">
+    <div class="contenido-dialog">
+      <button type="button" class="btn cerrar" data-cerrar aria-label="Cerrar">X</button>
+      <img id="lightbox-img" src="" alt="">
+      <div id="lightbox-info"></div>
+    </div>
+  </dialog>
+
+  <!-- Ventana (dialog) del carrito de compras -->
+  <dialog id="carrito" aria-label="Carrito de compras">
+    <div class="contenido-dialog">
+      <button type="button" class="btn cerrar" data-cerrar aria-label="Cerrar">X</button>
+      <h2>Tu carrito</h2>
+      <p id="carrito-vacio">Tu carrito está vacío.</p>
+      <ul id="carrito-lista"></ul>
+      <div id="carrito-acciones" hidden>
+        <button type="button" class="btn" id="btn-pedido">Enviar pedido por el formulario</button>
+        <button type="button" class="btn" id="btn-vaciar">Vaciar carrito</button>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" id="btn-arriba" class="btn" aria-label="Volver arriba" hidden>↑</button>
+
+  <script src="script.js"></script>
+  <!-- La vida es un Mar de posibilidades.-->
+</body>
+
+</html>
