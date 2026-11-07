@@ -1,11 +1,28 @@
-
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
-const fs = require("fs");
+const {MongoClient} = require('mongodb');
 
 const app = express();
+
+const uri = process.env.MONGODB_URI
+const client = new MongoClient(uri);
+let db;
+
+async function conectarDB() {
+  try {
+    await client.connect();
+    db = client.db(process.env.encuadrado_db);
+    console.log(" se confirma la conexion con MongoDB Atlas");
+  } catch (error) {
+    console.error(" ¡Error! No se ha podido conectar con MongoDB Atlas", error);
+    process.exit(1);
+  }
+}
+
+conectarDB();
+
 const PUERTO = process.env.PORT || 3000;
-const ARCHIVO_MENSAJES = path.join(__dirname, "mensajes.json");
 const CARPETA_PUBLICA = path.join(__dirname, "public");
 
 
@@ -29,22 +46,9 @@ SECCIONES.forEach((id) => {
   app.get(`/${id}`, (req, res) => res.redirect(`/#${id}`));
 });
 
-function leerMensajes() {
-  if (!fs.existsSync(ARCHIVO_MENSAJES)) return [];
-  try {
-    return JSON.parse(fs.readFileSync(ARCHIVO_MENSAJES, "utf-8"));
-  } catch {
-    return [];
-  }
-}
 
-function guardarMensaje(mensaje) {
-  const mensajes = leerMensajes();
-  mensajes.push(mensaje);
-  fs.writeFileSync(ARCHIVO_MENSAJES, JSON.stringify(mensajes, null, 2));
-}
 
-app.post("/api/contacto", (req, res) => {
+app.post("/api/contacto", async (req, res) => {
   const { nombre, correo, mensaje } = req.body || {};
 
   if (
@@ -83,11 +87,10 @@ app.post("/api/contacto", (req, res) => {
   };
 
   try {
-    guardarMensaje(registro);
-    console.log("Nuevo mensaje de contacto guardado en mensajes.json:");
-    console.log(registro);
+   const resultado = await db.collection('mensajes').insertOne(registro);
+   console.log("Nuevo mensaje guardado en MongoDB con ID:", resultado.insertedId); 
   } catch (error) {
-    console.error("No se pudo guardar el mensaje:", error);
+    console.error("No se pudo guardar el mensaje en MongoDB:", error);
     return res.status(500).json({ mensaje: "No pudimos guardar tu mensaje. Intenta más tarde." });
   }
 
