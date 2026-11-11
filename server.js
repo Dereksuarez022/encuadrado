@@ -1,3 +1,4 @@
+const {GoogleGenAI} = require('@google/genai');
 require('dotenv').config();
 const express = require("express");
 const path = require("path");
@@ -103,6 +104,39 @@ app.use((error, req, res, next) => {
     return res.status(400).json({ mensaje: "Los datos enviados no son válidos." });
   }
   next(error);
+});
+
+const ai = new GoogleGenAI({});
+
+app.post("/api/ia", async (req, res) => {
+  const { pregunta } = req.body || {};
+  
+
+
+if (!pregunta || typeof pregunta !== "string" || pregunta.trim ().length < 3) {
+  return res.status(400).json({ mensaje: "La pregunta es muy corta."});
+}
+
+try {
+  const interaction = await ai.interactions.create({
+  model: "gemini-3.5-flash",
+  input: pregunta.trim(),
+});
+
+const respuestaIA = interaction.output_text;
+
+return res.status(200).json({
+  respuesta: respuestaIA
+}); 
+
+}
+
+ catch (error) {
+  console.error("Error al consultar Gemini:", error);
+  return res.status(500).json({
+    mensaje: "La IA no pudo responder. Intentalo de nuevo."
+  });
+}
 });
 
 app.listen(PUERTO, () => {

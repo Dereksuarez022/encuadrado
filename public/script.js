@@ -246,6 +246,52 @@ function iniciarBotonArriba() {
   });
 }
 
+// --------- Iniciar asistente AI ---------
+
+function iniciarAsistenteIA() {
+  const boton = document.getElementById("btn-preguntar-ia");
+  const input = document.getElementById("pregunta-ia");
+  const respuestaDiv = document.getElementById("respuesta-ia");
+
+  if (!boton || !input || !respuestaDiv) return;
+
+  boton.addEventListener("click", async () => {
+    const pregunta = input.value.trim();
+
+    if (pregunta.length < 3) {
+      respuestaDiv.style.display = "block";
+      respuestaDiv.textContent = "Escribe una pregunta un poco más larga, por favor.";
+      return;
+    }
+
+    boton.disabled = true;
+    boton.textContent = "Pensando...";
+    respuestaDiv.style.display = "block";
+    respuestaDiv.textContent = "Consultando al asistente...";
+
+    try {
+      const respuesta = await fetch("/api/ia", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pregunta: pregunta }),
+      });
+
+      const datos = await respuesta.json();
+
+      if (respuesta.ok) {
+        respuestaDiv.textContent = datos.respuesta;
+      } else {
+        respuestaDiv.textContent = datos.mensaje || "Hubo un error. Intenta de nuevo.";
+      }
+    } catch (error) {
+      respuestaDiv.textContent = "No se pudo conectar con el asistente. Revisa tu conexión.";
+    } finally {
+      boton.disabled = false;
+      boton.textContent = "Preguntar";
+    }
+  });
+}
+
 // ---------- Formulario de contacto ----------
 function iniciarFormulario() {
   const formulario = document.getElementById("formulario-contactanos");
@@ -340,4 +386,5 @@ document.addEventListener("DOMContentLoaded", () => {
   iniciarCarrito();
   iniciarBotonArriba();
   iniciarFormulario();
+  iniciarAsistenteIA();
 });

@@ -149,6 +149,37 @@ article {
   border-radius: 15px;
 }
 
+#asistente-ia{
+  margin: 15px;
+  padding: 15px;
+  background-color: #f5efeb;
+  border-radius: 15px;
+  text-align: left;
+ color: #2f4156;
+}
+
+#pregunta-ia{
+  flex: 1; 
+  padding: 10px; 
+  border-radius: 10px; 
+  border: none; 
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#respuesta-ia{
+  padding: 10px; 
+  border-radius: 10px; 
+  background-color: #c8d9e6; 
+  min-height: 40px; 
+  display: none;
+}
+
+#tt-ia{
+  background: none;
+ color: #2f4156; 
+ text-align: left;
+}
+
 
 .galeria-grid article {
   display: flex;
